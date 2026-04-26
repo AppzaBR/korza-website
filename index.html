@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korza — Seu app nas stores em até 14 dias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV FIXO NO TOPO -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+
+      <a href="/" class="nav__logo">
+        <svg class="nav__logo-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polyline points="6,4 13,10 6,16" stroke="#155DFC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="nav__logo-text">KORZA</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#funcionalidades" class="nav__link">FUNCIONALIDADES</a></li>
+        <li><a href="#como-funciona" class="nav__link">COMO FUNCIONA</a></li>
+        <li><a href="#cases" class="nav__link">CASES</a></li>
+        <li><a href="#planos" class="nav__link">PLANOS</a></li>
+        <li><a href="#faq" class="nav__link">F.A.Q</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="#login" class="nav__btn nav__btn--dark">
+          LOGIN
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#criar" class="nav__btn nav__btn--primary">
+          CRIAR MEU APP
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__col hero__col--content">
+
+      <!-- Eyebrow -->
+      <div class="hero__eyebrow">
+        <span class="hero__pulse"></span>
+        <span>Shopify · Nuvemshop · Sites Próprios</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero__headline">
+        O canal que transforma<br />
+        tráfego em <span class="hero__headline-accent">recorrência.</span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero__sub">
+        Sua loja no celular do cliente, com push notifications, analytics e publicação nas stores em até 14 dias.
+      </p>
+
+      <!-- Stats -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-target="12" data-prefix="R$ " data-suffix="M+">R$ 0</span>
+          <span class="hero__stat-label">Faturamento gerado aos clientes</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-target="47" data-suffix="+">0</span>
+          <span class="hero__stat-label">Apps lançados em 2026</span>
+        </div>
+        <div class="hero__stat hero__stat--text">
+          <span class="hero__stat-number hero__stat-number--text">7 a 14 dias</span>
+          <span class="hero__stat-label">Para publicar nas stores</span>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero__ctas">
+        <a href="#criar" class="hero__cta hero__cta--primary">
+          Crie seu app
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contato" class="hero__cta hero__cta--outline">
+          Fale conosco
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Coluna direita: canvas de partículas -->
+    <div class="hero__col hero__col--canvas">
+      <canvas id="particles"></canvas>
+    </div>
+  </section>
+
+  <!-- SEÇÕES FUTURAS -->
+
+  <script src="js/particles.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
