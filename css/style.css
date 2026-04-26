@@ -82,19 +82,15 @@ ul {
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 7px;
   flex-shrink: 0;
 }
 
-.nav__logo-icon {
+.nav__logo-img {
+  height: 32px;
+  width: auto;
   display: block;
-}
-
-.nav__logo-text {
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--color-text);
+  /* logo é branca — inverte para ficar preta sobre fundo claro */
+  filter: invert(1);
 }
 
 /* Links centrais */
