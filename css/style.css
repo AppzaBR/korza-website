@@ -89,8 +89,6 @@ ul {
   height: 32px;
   width: auto;
   display: block;
-  /* logo é branca — inverte para ficar preta sobre fundo claro */
-  filter: invert(1);
 }
 
 /* Links centrais */
