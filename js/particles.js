@@ -7,9 +7,13 @@
   let mouse = { x: -9999, y: -9999 };
   let t = 0;
 
-  const TOTAL      = 310;
-  const LINK_DIST  = 80;
-  const REPEL_DIST = 100;
+  const TOTAL      = 300;
+  const LINK_DIST  = 85;
+  const REPEL_DIST = 110;
+
+  function gaussRand() {
+    return (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
+  }
 
   function resize() {
     const rect = canvas.getBoundingClientRect();
@@ -21,20 +25,9 @@
   function createParticles() {
     particles = [];
     for (let i = 0; i < TOTAL; i++) {
-      const cx = W * 0.5;
-      const cy = H * 0.5;
-      const spread = Math.min(W, H) * 0.46;
-
-      /* distribuicao gaussiana via soma de randoms */
-      const gx = (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
-      const gy = (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
-
-      /* ruido adicional para quebrar simetria */
-      const nx = (Math.random() - 0.5) * spread * 0.5;
-      const ny = (Math.random() - 0.5) * spread * 0.5;
-
-      const bx = cx + gx * spread + nx;
-      const by = cy + gy * spread * 0.72 + ny;
+      const spread = Math.min(W, H) * 0.44;
+      const bx = W * 0.5 + gaussRand() * spread;
+      const by = H * 0.5 + gaussRand() * spread * 0.74;
 
       particles.push({
         baseX:  Math.max(0, Math.min(W, bx)),
@@ -43,10 +36,10 @@
         y:      by,
         phaseX: Math.random() * Math.PI * 2,
         phaseY: Math.random() * Math.PI * 2,
-        freqX:  0.0004 + Math.random() * 0.0006,
-        freqY:  0.0004 + Math.random() * 0.0006,
-        ampX:   4 + Math.random() * 12,
-        ampY:   4 + Math.random() * 12,
+        freqX:  0.004 + Math.random() * 0.006,
+        freqY:  0.003 + Math.random() * 0.005,
+        ampX:   10 + Math.random() * 22,
+        ampY:   10 + Math.random() * 22,
         r:      1 + Math.random() * 1.8,
         alpha:  0.2 + Math.random() * 0.6,
       });
@@ -54,7 +47,7 @@
   }
 
   function draw() {
-    t++;
+    t += 0.4;
     ctx.clearRect(0, 0, W, H);
 
     for (let i = 0; i < particles.length; i++) {
@@ -68,8 +61,8 @@
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < REPEL_DIST && dist > 0) {
         const f = (REPEL_DIST - dist) / REPEL_DIST;
-        p.x += (dx / dist) * f * 20;
-        p.y += (dy / dist) * f * 20;
+        p.x += (dx / dist) * f * 22;
+        p.y += (dy / dist) * f * 22;
       }
     }
 
@@ -79,7 +72,7 @@
         const dx = a.x - b.x, dy = a.y - b.y;
         const d = Math.sqrt(dx * dx + dy * dy);
         if (d < LINK_DIST) {
-          const alpha = 0.15 * (1 - d / LINK_DIST);
+          const alpha = 0.14 * (1 - d / LINK_DIST);
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
