@@ -20,20 +20,25 @@
       </a>
 
       <ul class="nav__links">
-        <li><a href="#funcionalidades" class="nav__link">FUNCIONALIDADES</a></li>
-        <li><a href="#como-funciona" class="nav__link">COMO FUNCIONA</a></li>
-        <li><a href="#cases" class="nav__link">CASES</a></li>
-        <li><a href="#planos" class="nav__link">PLANOS</a></li>
-        <li><a href="#faq" class="nav__link">F.A.Q</a></li>
+        <li><a href="#funcionalidades" class="nav__link" data-i18n="nav_features">FUNCIONALIDADES</a></li>
+        <li><a href="#como-funciona"   class="nav__link" data-i18n="nav_how">COMO FUNCIONA</a></li>
+        <li><a href="#cases"           class="nav__link" data-i18n="nav_cases">CASES</a></li>
+        <li><a href="#planos"          class="nav__link" data-i18n="nav_pricing">PLANOS</a></li>
+        <li><a href="#faq"             class="nav__link" data-i18n="nav_faq">F.A.Q</a></li>
       </ul>
 
       <div class="nav__actions">
+        <div class="nav__lang">
+          <button class="lang-btn lang-btn--active" data-lang-btn="pt">PT</button>
+          <span class="nav__lang-sep">|</span>
+          <button class="lang-btn" data-lang-btn="en">EN</button>
+        </div>
         <a href="#login" class="nav__btn nav__btn--dark">
-          LOGIN
+          <span data-i18n="nav_login">LOGIN</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#criar" class="nav__btn nav__btn--primary">
-          CRIAR MEU APP
+          <span data-i18n="nav_cta">CRIAR MEU APP</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -48,44 +53,44 @@
       <!-- Eyebrow -->
       <div class="hero__eyebrow">
         <span class="hero__pulse"></span>
-        <span>Shopify · Nuvemshop · Sites Próprios</span>
+        <span data-i18n="hero_eyebrow">Shopify · Nuvemshop · Sites Próprios</span>
       </div>
 
       <!-- Headline -->
       <h1 class="hero__headline">
-        O canal que transforma<br />
-        tráfego em <span class="hero__headline-accent">recorrência.</span>
+        <span data-i18n="hero_headline_1">O canal que transforma</span><br />
+        <span data-i18n="hero_headline_2">tráfego em </span><span class="hero__headline-accent" data-i18n="hero_accent">recorrência.</span>
       </h1>
 
       <!-- Subtítulo -->
-      <p class="hero__sub">
-        Sua loja no celular do cliente, com push notifications, analytics e publicação nas stores em até 14 dias.
+      <p class="hero__sub" data-i18n="hero_sub">
+        Sua loja no celular do cliente, com notificações, campanhas, analytics e publicação nas lojas de aplicativo em até 14 dias.
       </p>
 
       <!-- Stats -->
       <div class="hero__stats">
         <div class="hero__stat">
           <span class="hero__stat-number" data-target="12" data-prefix="R$ " data-suffix="M+">R$ 0</span>
-          <span class="hero__stat-label">Faturamento gerado aos clientes</span>
+          <span class="hero__stat-label" data-i18n="hero_stat1_label">Faturamento gerado aos clientes</span>
         </div>
         <div class="hero__stat">
           <span class="hero__stat-number" data-target="47" data-suffix="+">0</span>
-          <span class="hero__stat-label">Apps lançados em 2026</span>
+          <span class="hero__stat-label" data-i18n="hero_stat2_label">Apps lançados em 2026</span>
         </div>
         <div class="hero__stat hero__stat--text">
-          <span class="hero__stat-number hero__stat-number--text">7 a 14 dias</span>
-          <span class="hero__stat-label">Para publicar nas stores</span>
+          <span class="hero__stat-number hero__stat-number--text" data-i18n="hero_stat3_num">7 a 14 dias</span>
+          <span class="hero__stat-label" data-i18n="hero_stat3_label">Para publicar nas stores</span>
         </div>
       </div>
 
       <!-- CTAs -->
       <div class="hero__ctas">
         <a href="#criar" class="hero__cta hero__cta--primary">
-          Crie seu app
+          <span data-i18n="hero_cta1">Crie seu app</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#contato" class="hero__cta hero__cta--outline">
-          Fale conosco
+          <span data-i18n="hero_cta2">Fale conosco</span>
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -98,8 +103,16 @@
     </div>
   </section>
 
+  <!-- MARQUEE DE INTEGRAÇÕES -->
+  <div class="marquee reveal">
+    <div class="marquee__track">
+      <!-- itens injetados pelo i18n.js -->
+    </div>
+  </div>
+
   <!-- SEÇÕES FUTURAS -->
 
+  <script src="js/i18n.js" defer></script>
   <script src="js/particles.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
