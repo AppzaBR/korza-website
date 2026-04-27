@@ -326,21 +326,62 @@ ul {
 }
 
 /* =============================================
-   RESPONSIVO — TABLET (até 1023px)
+   NAV — ajustes gerais para evitar quebra de linha
    ============================================= */
 
-@media (max-width: 1023px) {
+.nav__link {
+  white-space: nowrap;
+}
+
+.nav__logo {
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.nav__actions {
+  flex-shrink: 0;
+}
+
+/* =============================================
+   RESPONSIVO — LARGE TABLET / SMALL DESKTOP
+   (até 1280px): reduz padding e font da nav
+   ============================================= */
+
+@media (max-width: 1280px) {
   :root {
-    --nav-px: 32px;
+    --nav-px: 40px;
     --nav-height: 80px;
   }
 
-  /* Oculta links centrais da nav */
+  .nav__links {
+    gap: 20px;
+  }
+
+  .nav__link {
+    font-size: 12px;
+  }
+
+  .nav__btn {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+
+/* =============================================
+   RESPONSIVO — TABLET (até 1024px)
+   Nav sem links centrais, hero 1 coluna
+   ============================================= */
+
+@media (max-width: 1024px) {
+  :root {
+    --nav-px: 32px;
+    --nav-height: 72px;
+  }
+
   .nav__links {
     display: none;
   }
 
-  /* Hero: 1 coluna */
   .hero {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -374,6 +415,7 @@ ul {
 
 /* =============================================
    RESPONSIVO — MOBILE (até 767px)
+   Nav compacta, PT|EN oculto, CTAs empilhados
    ============================================= */
 
 @media (max-width: 767px) {
@@ -382,27 +424,28 @@ ul {
     --nav-height: 64px;
   }
 
-  /* Nav mobile: esconde PT|EN e LOGIN */
   .nav__lang {
-    display: none;
+    display: none !important;
   }
 
   .nav__btn--dark {
-    display: none;
+    display: none !important;
   }
 
   .nav__btn--primary {
-    padding: 9px 14px;
-    font-size: 12px;
+    padding: 9px 12px;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    max-width: 160px;
   }
 
-  /* Hero mobile */
   .hero {
     padding: calc(var(--nav-height) + 32px) var(--nav-px) 40px;
   }
 
   .hero__headline {
-    font-size: clamp(30px, 9vw, 44px);
+    font-size: clamp(28px, 8vw, 42px);
     letter-spacing: -0.5px;
     margin-bottom: 14px;
   }
@@ -442,6 +485,40 @@ ul {
   .hero__col--canvas {
     height: 220px;
     margin-top: 20px;
+  }
+}
+
+/* =============================================
+   RESPONSIVO — MOBILE XS (até 380px)
+   Galaxy Z Fold, iPhone SE, telas muito estreitas
+   ============================================= */
+
+@media (max-width: 380px) {
+  :root {
+    --nav-px: 16px;
+    --nav-height: 60px;
+  }
+
+  .nav__logo-img {
+    height: 110px;
+  }
+
+  .nav__btn--primary {
+    padding: 8px 10px;
+    font-size: 10px;
+    max-width: 130px;
+  }
+
+  .hero__headline {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .hero__sub {
+    font-size: 14px;
+  }
+
+  .hero__col--canvas {
+    height: 180px;
   }
 }
 
