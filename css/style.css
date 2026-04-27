@@ -339,16 +339,26 @@ ul {
     display: none;
   }
 
-  /* Hero vira coluna única */
+  /* Hero mobile: duas linhas — conteúdo em cima, canvas embaixo */
   .hero {
     grid-template-columns: 1fr;
-    padding: 100px 20px 60px;
+    grid-template-rows: auto auto;
+    min-height: 100vh;
+    padding: 100px 20px 40px;
     gap: 0;
+    align-items: start;
   }
 
-  /* Esconde canvas em mobile */
   .hero__col--canvas {
-    display: none;
+    display: flex;
+    width: 100%;
+    height: 260px;
+    margin-top: 16px;
+  }
+
+  #particles {
+    width: 100%;
+    height: 100%;
   }
 
   .hero__headline {
