@@ -7,9 +7,9 @@
   let mouse = { x: -9999, y: -9999 };
   let t = 0;
 
-  const TOTAL      = 320;
-  const LINK_DIST  = 70;
-  const REPEL_DIST = 90;
+  const TOTAL      = 310;
+  const LINK_DIST  = 80;
+  const REPEL_DIST = 100;
 
   function resize() {
     const rect = canvas.getBoundingClientRect();
@@ -21,29 +21,34 @@
   function createParticles() {
     particles = [];
     for (let i = 0; i < TOTAL; i++) {
-      /* posição X uniforme ao longo de toda a largura */
-      const xRatio = Math.random();
-      /* posição Y: ondas senoidais sobrepostas + ruído pequeno */
-      const wave1 = Math.sin(xRatio * Math.PI * 3) * 0.12;
-      const wave2 = Math.sin(xRatio * Math.PI * 6 + 1.2) * 0.06;
-      const noise = (Math.random() - 0.5) * 0.18;
-      const yCenter = 0.52 + wave1 + wave2 + noise;
+      const cx = W * 0.5;
+      const cy = H * 0.5;
+      const spread = Math.min(W, H) * 0.46;
+
+      /* distribuicao gaussiana via soma de randoms */
+      const gx = (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
+      const gy = (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
+
+      /* ruido adicional para quebrar simetria */
+      const nx = (Math.random() - 0.5) * spread * 0.5;
+      const ny = (Math.random() - 0.5) * spread * 0.5;
+
+      const bx = cx + gx * spread + nx;
+      const by = cy + gy * spread * 0.72 + ny;
 
       particles.push({
-        x:       xRatio * W,
-        y:       yCenter * H,
-        baseX:   xRatio * W,
-        baseY:   yCenter * H,
-        offsetX: (Math.random() - 0.5) * 1.2,
-        offsetY: (Math.random() - 0.5) * 1.2,
-        phaseX:  Math.random() * Math.PI * 2,
-        phaseY:  Math.random() * Math.PI * 2,
-        freqX:   0.0008 + Math.random() * 0.0012,
-        freqY:   0.0006 + Math.random() * 0.001,
-        ampX:    8  + Math.random() * 14,
-        ampY:    12 + Math.random() * 20,
-        r:       1.2 + Math.random() * 1.6,
-        alpha:   0.15 + Math.random() * 0.5,
+        baseX:  Math.max(0, Math.min(W, bx)),
+        baseY:  Math.max(0, Math.min(H, by)),
+        x:      bx,
+        y:      by,
+        phaseX: Math.random() * Math.PI * 2,
+        phaseY: Math.random() * Math.PI * 2,
+        freqX:  0.0004 + Math.random() * 0.0006,
+        freqY:  0.0004 + Math.random() * 0.0006,
+        ampX:   4 + Math.random() * 12,
+        ampY:   4 + Math.random() * 12,
+        r:      1 + Math.random() * 1.8,
+        alpha:  0.2 + Math.random() * 0.6,
       });
     }
   }
@@ -52,42 +57,39 @@
     t++;
     ctx.clearRect(0, 0, W, H);
 
-    /* move cada partícula em ondas senoidais lentas */
     for (let i = 0; i < particles.length; i++) {
       const p = particles[i];
 
       p.x = p.baseX + Math.sin(t * p.freqX + p.phaseX) * p.ampX;
       p.y = p.baseY + Math.cos(t * p.freqY + p.phaseY) * p.ampY;
 
-      /* repulsão suave do mouse */
       const dx   = p.x - mouse.x;
       const dy   = p.y - mouse.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < REPEL_DIST && dist > 0) {
         const f = (REPEL_DIST - dist) / REPEL_DIST;
-        p.x += (dx / dist) * f * 18;
-        p.y += (dy / dist) * f * 18;
+        p.x += (dx / dist) * f * 20;
+        p.y += (dy / dist) * f * 20;
       }
     }
 
-    /* conexões */
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const a = particles[i], b = particles[j];
         const dx = a.x - b.x, dy = a.y - b.y;
         const d = Math.sqrt(dx * dx + dy * dy);
         if (d < LINK_DIST) {
+          const alpha = 0.15 * (1 - d / LINK_DIST);
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(21,93,252,${(0.06 * (1 - d / LINK_DIST)).toFixed(3)})`;
+          ctx.strokeStyle = `rgba(21,93,252,${alpha.toFixed(3)})`;
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }
       }
     }
 
-    /* pontos */
     for (let i = 0; i < particles.length; i++) {
       const p = particles[i];
       ctx.beginPath();
@@ -107,7 +109,8 @@
     mouse.y = e.clientY - r.top;
   });
   canvas.addEventListener('mouseleave', () => {
-    mouse.x = -9999; mouse.y = -9999;
+    mouse.x = -9999;
+    mouse.y = -9999;
   });
 
   resize();

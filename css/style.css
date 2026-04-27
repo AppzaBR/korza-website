@@ -16,7 +16,7 @@
   --radius-btn: 8px;
   --radius-card: 12px;
 
-  --nav-height: 88px;
+  --nav-height: 96px;
   --nav-px: 64px;
 }
 
@@ -86,7 +86,7 @@ ul {
 }
 
 .nav__logo-img {
-  height: 52px;
+  height: 64px;
   width: auto;
   display: block;
 }
