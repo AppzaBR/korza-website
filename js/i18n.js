@@ -18,7 +18,7 @@ const TRANSLATIONS = {
     hero_eyebrow:    'Shopify · Nuvemshop · Sites Próprios',
     hero_headline_1: 'O canal que transforma',
     hero_headline_2: 'tráfego em',
-    hero_accent:     'recorrência.',
+    hero_accent:     'Recorrência.',
     hero_sub:        'Sua loja no celular do cliente, com notificações, campanhas, analytics e publicação nas lojas de aplicativo em até 14 dias.',
     hero_stat1_label:'Faturamento gerado aos clientes',
     hero_stat2_label:'Apps lançados em 2026',
@@ -29,9 +29,8 @@ const TRANSLATIONS = {
 
     /* Marquee */
     marquee_items: [
-      'Shopify', 'Nuvemshop', 'Sites Próprios',
-      'Push Notifications', 'Analytics', 'iOS', 'Android',
-      'Firebase', 'Supabase', 'Publicação em 14 dias'
+      'Shopify', 'Nuvemshop', 'Notificações Ilimitadas', 'Analytics', 'iOS', 'Android',
+      'Publicação em 14 dias', 'Campanhas de Venda', 'Personalização do App', 'Sincronização Instantânea'
     ],
   },
 
