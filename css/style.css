@@ -719,3 +719,132 @@ ul {
     letter-spacing: -0.5px;
   }
 }
+
+/* =============================================
+   SHOWCASE DE FUNCIONALIDADES
+   ============================================= */
+
+.showcase {
+  padding: 80px 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.showcase__feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.showcase__feature--right .showcase__content {
+  order: 2;
+}
+
+.showcase__feature--right .showcase__media {
+  order: 1;
+}
+
+.showcase__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.showcase__headline {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.showcase__sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+.showcase__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.showcase__bullets li {
+  font-size: 14px;
+  color: var(--color-text);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.showcase__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue);
+}
+
+.showcase__badge {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.showcase__media {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.showcase__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .showcase {
+    padding: 60px 40px;
+    gap: 80px;
+  }
+  .showcase__feature {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .showcase__feature--right .showcase__content {
+    order: 1;
+  }
+  .showcase__feature--right .showcase__media {
+    order: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .showcase {
+    padding: 48px 24px;
+    gap: 64px;
+  }
+}
