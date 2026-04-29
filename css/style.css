@@ -1023,6 +1023,50 @@ ul {
   background: transparent;
 }
 
+.steps__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.steps__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  min-width: 220px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.steps__cta--primary {
+  background: var(--color-blue);
+  color: #fff;
+  animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+.steps__cta--outline {
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+  background: transparent;
+}
+
+.steps__cta:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(21, 93, 252, 0.35); }
+  50%       { box-shadow: 0 0 0 10px rgba(21, 93, 252, 0); }
+}
+
 /* =============================================
    CASES REAIS
    ============================================= */
