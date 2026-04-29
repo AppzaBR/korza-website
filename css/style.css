@@ -29,14 +29,14 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* rolagem suave ao clicar em âncoras internas */
 }
 
 body {
   font-family: var(--font);
   background-color: var(--color-bg);
   color: var(--color-text);
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* suaviza renderização de fontes em WebKit (macOS/iOS) */
 }
 
 a {
@@ -57,7 +57,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 100; /* eleva a nav acima de todo o conteúdo da página */
   height: var(--nav-height);
   background-color: var(--color-bg);
   /* border-bottom aparece via .scrolled */
@@ -316,12 +316,12 @@ ul {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px) scale(0.98);
+  transform: translateY(24px) scale(0.98); /* inicia deslocado para baixo e levemente menor */
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1); /* retorna à posição original e escala 100% */
 }
 
 /* =============================================
@@ -573,7 +573,7 @@ ul {
 .marquee__track {
   display: flex;
   gap: 48px;
-  width: max-content;
+  width: max-content; /* garante que a faixa seja mais larga que o viewport, sem quebrar linha */
   animation: marquee-scroll 28s linear infinite;
 }
 
@@ -600,11 +600,11 @@ ul {
 
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); } /* -50% porque a track contém os itens duplicados */
 }
 
 .marquee:hover .marquee__track {
-  animation-play-state: paused;
+  animation-play-state: paused; /* congela o scroll ao passar o mouse */
 }
 
 /* =============================================
@@ -735,12 +735,12 @@ ul {
   gap: 0;
   border-bottom: 1px solid var(--color-border);
   margin-bottom: 56px;
-  overflow-x: auto;
-  scrollbar-width: none;
+  overflow-x: auto; /* permite scroll horizontal das tabs em telas pequenas */
+  scrollbar-width: none; /* oculta a scrollbar no Firefox mantendo o scroll funcional */
 }
 
 .showcase__tabs::-webkit-scrollbar {
-  display: none;
+  display: none; /* oculta a scrollbar em Chrome/Safari */
 }
 
 .showcase__tab {
@@ -755,7 +755,7 @@ ul {
   color: var(--color-muted);
   cursor: pointer;
   white-space: nowrap;
-  margin-bottom: -1px;
+  margin-bottom: -1px; /* sobrepõe 1px sobre a borda inferior do container, fundindo o underline ativo */
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -773,12 +773,12 @@ ul {
 }
 
 .showcase__panel {
-  display: none;
+  display: none; /* oculto por padrão; JS seta display:grid antes de aplicar .active */
   grid-template-columns: 1fr 1.5fr;
   gap: 64px;
   align-items: center;
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(12px); /* painel parte levemente abaixo para animar a entrada */
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 

@@ -14,7 +14,11 @@
 
 <body>
 
-  <!-- NAV FIXO NO TOPO -->
+  <!-- ============================================
+       NAV — barra de navegação fixa no topo
+       Inclui logo, links, seletor de idioma e CTAs.
+       A classe .scrolled é adicionada via JS ao rolar.
+       ============================================ -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
 
@@ -55,7 +59,11 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ============================================
+       HERO — seção principal acima da dobra
+       Grid de duas colunas: copy + canvas de partículas.
+       Stats animados por main.js (contadores).
+       ============================================ -->
   <section class="hero">
     <div class="hero__col hero__col--content">
 
@@ -120,14 +128,23 @@
     </div>
   </section>
 
-  <!-- MARQUEE DE INTEGRAÇÕES -->
+  <!-- ============================================
+       MARQUEE — faixa de integrações em loop contínuo
+       Os itens são injetados dinamicamente pelo i18n.js
+       conforme o idioma selecionado (PT ou EN).
+       ============================================ -->
   <div class="marquee reveal">
     <div class="marquee__track">
       <!-- itens injetados pelo i18n.js -->
     </div>
   </div>
 
-  <!-- STORY / PAIN -->
+  <!-- ============================================
+       STORY / PAIN — seção de dores do cliente
+       Três cards com os problemas que o app resolve,
+       seguidos de um pivot narrativo de virada.
+       O id="funcionalidades" ancora o link da nav.
+       ============================================ -->
   <section class="story" id="funcionalidades">
 
     <div class="story__intro">
@@ -172,7 +189,11 @@
 
   </section>
 
-  <!-- SHOWCASE DE FUNCIONALIDADES -->
+  <!-- ============================================
+       SHOWCASE — demonstração das funcionalidades
+       Navegação por tabs; cada tab exibe um painel
+       com copy + screenshot. Troca controlada por main.js.
+       ============================================ -->
   <section class="showcase" id="funcionalidades-showcase">
 
     <div class="showcase__tabs">
@@ -292,7 +313,10 @@
     </div>
   </section>
 
-  <!-- SEÇÕES FUTURAS -->
+  <!-- ============================================
+       SEÇÕES FUTURAS
+       Como funciona, Cases, Planos, FAQ — a adicionar.
+       ============================================ -->
 
   <script src="js/i18n.js" defer></script>
   <script src="js/particles.js" defer></script>
