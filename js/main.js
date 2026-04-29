@@ -123,3 +123,23 @@
     });
   });
 })();
+
+
+/* ---------- SCROLL REVEAL — story e marquee ---------- */
+(function () {
+  const revealEls = document.querySelectorAll(
+    '.story__card, .story__pivot, .story__intro, .marquee-section'
+  );
+  revealEls.forEach(el => el.classList.add('reveal'));
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+})();
