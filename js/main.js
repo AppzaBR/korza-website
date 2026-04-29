@@ -96,3 +96,30 @@
 
   stats.forEach((el) => observer.observe(el));
 })();
+
+
+/* ---------- SHOWCASE TABS ---------- */
+(function () {
+  const tabs = document.querySelectorAll('.showcase__tab');
+  const panels = document.querySelectorAll('.showcase__panel');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => {
+        p.classList.remove('active');
+        p.style.display = 'none';
+      });
+
+      tab.classList.add('active');
+      const activePanel = document.querySelector(`.showcase__panel[data-panel="${target}"]`);
+      activePanel.style.display = 'grid';
+      requestAnimationFrame(() => {
+        activePanel.classList.add('active');
+      });
+    });
+  });
+})();

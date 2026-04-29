@@ -68,8 +68,8 @@
       <!-- Headline -->
       <h1 class="hero__headline">
         <span data-i18n="hero_headline_1">O canal que transforma</span><br />
-        <span data-i18n="hero_headline_2">tráfego em </span><span class="hero__headline-accent"
-          data-i18n="hero_accent">Recorrência.</span>
+        <span data-i18n="hero_headline_2">tráfego em </span><span class="hero__headline-accent" data-i18n="hero_accent">
+          RECORRÊNCIA.</span>
       </h1>
 
       <!-- Subtítulo -->
@@ -157,7 +157,8 @@
       <div class="story__card">
         <span class="story__card-num">03</span>
         <h3 class="story__card-title">Mobile representa mais de 70% das suas visitas</h3>
-        <p class="story__card-text">Um app com sincronização automática e instantânea com fluidez tão boa quanto o site na internet ganha o coração do seu cliente.</p>
+        <p class="story__card-text">Um app com sincronização automática e instantânea com fluidez tão boa quanto o site
+          na internet ganha o coração do seu cliente.</p>
       </div>
 
     </div>
@@ -174,115 +175,121 @@
   <!-- SHOWCASE DE FUNCIONALIDADES -->
   <section class="showcase" id="funcionalidades-showcase">
 
-    <div class="showcase__feature showcase__feature--left">
-      <div class="showcase__content">
-        <p class="showcase__label">PAINEL DE CONTROLE</p>
-        <h3 class="showcase__headline">Toda a inteligência do seu app em um lugar</h3>
-        <p class="showcase__sub">Downloads, vendas e faturamento gerado pelo app em tempo real. Veja o impacto direto do
-          canal mobile no seu negócio.</p>
-        <ul class="showcase__bullets">
-          <li>Downloads e usuários ativos</li>
-          <li>Número de vendas pelo aplicativo</li>
-          <li>Faturamento em tempo real com gráfico diário</li>
-          <li>Acesso direto à Play Store e App Store</li>
-        </ul>
-      </div>
-      <div class="showcase__media">
-        <img src="assets/Painel.png" alt="Painel de controle Korza" class="showcase__img" />
-      </div>
+    <div class="showcase__tabs">
+      <button class="showcase__tab active" data-tab="painel">Painel</button>
+      <button class="showcase__tab" data-tab="campanhas">Campanhas</button>
+      <button class="showcase__tab" data-tab="criar">Criar Campanha</button>
+      <button class="showcase__tab" data-tab="vendas">Histórico de Vendas</button>
+      <button class="showcase__tab" data-tab="analytics">Analytics</button>
+      <button class="showcase__tab" data-tab="personalizar">Personalização</button>
     </div>
 
-    <div class="showcase__feature showcase__feature--right">
-      <div class="showcase__media">
-        <img src="assets/Campanhas.png" alt="Campanhas Push Korza" class="showcase__img" />
-      </div>
-      <div class="showcase__content">
-        <p class="showcase__label">CAMPANHAS PUSH</p>
-        <h3 class="showcase__headline">Notificações que vendem, não que irritam</h3>
-        <p class="showcase__sub">Crie, agende e monitore campanhas push com visão de calendário. Rastreie qual campanha
-          gerou qual venda.</p>
-        <ul class="showcase__bullets">
-          <li>Calendário de campanhas visual (lista ou grid)</li>
-          <li>Agendamento por data, hora e fuso horário</li>
-          <li>UTM tracking automático por campanha</li>
-          <li>Histórico completo de disparos</li>
-        </ul>
-      </div>
-    </div>
+    <div class="showcase__panels">
 
-    <div class="showcase__feature showcase__feature--left">
-      <div class="showcase__content">
-        <p class="showcase__label">CRIAÇÃO DE CAMPANHAS</p>
-        <h3 class="showcase__headline">Do rascunho ao envio em menos de 2 minutos</h3>
-        <p class="showcase__sub">Formulário completo com pré-visualização ao vivo. O push chega exatamente como você
-          configurou.</p>
-        <ul class="showcase__bullets">
-          <li>Pré-visualização nativa em tempo real</li>
-          <li>Link direto para qualquer página da loja</li>
-          <li>Teste de notificação antes de enviar</li>
-          <li>UTM automático para rastreamento no GA4</li>
-        </ul>
+      <div class="showcase__panel active" data-panel="painel">
+        <div class="showcase__content">
+          <p class="showcase__label">PAINEL DE CONTROLE</p>
+          <h3 class="showcase__headline">Toda a inteligência do seu app em um lugar</h3>
+          <p class="showcase__sub">Downloads, vendas e faturamento gerado pelo app em tempo real. Veja o impacto direto do canal mobile no seu negócio.</p>
+          <ul class="showcase__bullets">
+            <li>Downloads e usuários ativos</li>
+            <li>Número de vendas pelo aplicativo</li>
+            <li>Faturamento em tempo real com gráfico diário</li>
+            <li>Acesso direto à Play Store e App Store</li>
+          </ul>
+        </div>
+        <div class="showcase__media">
+          <img src="assets/Painel.png" alt="Painel de controle Korza" class="showcase__img" />
+        </div>
       </div>
-      <div class="showcase__media">
-        <img src="assets/CriarCampanha.png" alt="Criar campanha Korza" class="showcase__img" />
-      </div>
-    </div>
 
-    <div class="showcase__feature showcase__feature--right">
-      <div class="showcase__media">
-        <img src="assets/HistoricoVendas.png" alt="Histórico de vendas Korza" class="showcase__img" />
+      <div class="showcase__panel" data-panel="campanhas">
+        <div class="showcase__content">
+          <p class="showcase__label">CAMPANHAS PUSH</p>
+          <h3 class="showcase__headline">Notificações que vendem, não que irritam</h3>
+          <p class="showcase__sub">Crie, agende e monitore campanhas com visão de calendário. Rastreie qual campanha gerou qual venda.</p>
+          <ul class="showcase__bullets">
+            <li>Calendário de campanhas visual (lista ou grid)</li>
+            <li>Agendamento por data, hora e fuso horário</li>
+            <li>UTM tracking automático por campanha</li>
+            <li>Histórico completo de disparos</li>
+          </ul>
+        </div>
+        <div class="showcase__media">
+          <img src="assets/Campanhas.png" alt="Campanhas Korza" class="showcase__img" />
+        </div>
       </div>
-      <div class="showcase__content">
-        <p class="showcase__label">HISTÓRICO DE VENDAS</p>
-        <h3 class="showcase__headline">Cada venda rastreada. Cada campanha medida.</h3>
-        <p class="showcase__sub">Veja todas as vendas geradas pelo app com pedido, produto, valor e qual campanha
-          originou. Exporte e tome decisões com dados reais.</p>
-        <ul class="showcase__bullets">
-          <li>Rastreamento de pedido por campanha</li>
-          <li>Status pago / não pago em tempo real</li>
-          <li>Tags UTM por venda</li>
-          <li>Exportação de dados com 107+ páginas de histórico</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="showcase__feature showcase__feature--left">
-      <div class="showcase__content">
-        <p class="showcase__label">ANALYTICS</p>
-        <h3 class="showcase__headline">Entenda o que seu app gera, não só o que ele exibe</h3>
-        <p class="showcase__sub">Métricas de performance do canal mobile em um painel dedicado. Saiba de onde vêm seus
-          downloads, quais produtos convertem mais e quanto o app representa no seu faturamento total.</p>
-        <ul class="showcase__bullets">
-          <li>Taxa de conversão do app vs. site</li>
-          <li>Produtos mais visualizados e comprados</li>
-          <li>Receita atribuída ao canal mobile</li>
-          <li>Em breve: relatórios automáticos por período</li>
-        </ul>
-        <span class="showcase__badge">Em breve</span>
+      <div class="showcase__panel" data-panel="criar">
+        <div class="showcase__content">
+          <p class="showcase__label">CRIAÇÃO DE CAMPANHAS</p>
+          <h3 class="showcase__headline">Do rascunho ao envio em menos de 2 minutos</h3>
+          <p class="showcase__sub">Formulário completo com pré-visualização ao vivo. O push chega exatamente como você configurou.</p>
+          <ul class="showcase__bullets">
+            <li>Pré-visualização nativa em tempo real</li>
+            <li>Link direto para qualquer página da loja</li>
+            <li>Teste de notificação antes de enviar</li>
+            <li>UTM automático para rastreamento no GA4</li>
+          </ul>
+        </div>
+        <div class="showcase__media">
+          <img src="assets/CriarCampanha.png" alt="Criar campanha Korza" class="showcase__img" />
+        </div>
       </div>
-      <div class="showcase__media">
-        <img src="assets/AnalyticsEmBreve.png" alt="Analytics Korza" class="showcase__img" />
-      </div>
-    </div>
 
-    <div class="showcase__feature showcase__feature--right">
-      <div class="showcase__media">
-        <img src="assets/PersonalizarApp.png" alt="Personalizar app Korza" class="showcase__img" />
+      <div class="showcase__panel" data-panel="vendas">
+        <div class="showcase__content">
+          <p class="showcase__label">HISTÓRICO DE VENDAS</p>
+          <h3 class="showcase__headline">Cada venda rastreada. Cada campanha medida.</h3>
+          <p class="showcase__sub">Veja todas as vendas geradas pelo app com pedido, produto, valor e qual campanha originou. Exporte e tome decisões com dados reais.</p>
+          <ul class="showcase__bullets">
+            <li>Rastreamento de pedido por campanha</li>
+            <li>Status pago / não pago em tempo real</li>
+            <li>Tags UTM por venda</li>
+            <li>Exportação de dados com 107+ páginas de histórico</li>
+          </ul>
+        </div>
+        <div class="showcase__media">
+          <img src="assets/HistoricoVendas.png" alt="Histórico de vendas Korza" class="showcase__img" />
+        </div>
       </div>
-      <div class="showcase__content">
-        <p class="showcase__label">PERSONALIZAÇÃO</p>
-        <h3 class="showcase__headline">Seu app do jeito que sua marca pede</h3>
-        <p class="showcase__sub">Ative funcionalidades, ajuste cores, configure o menu e defina a experiência do seu
-          cliente sem precisar de código ou de um desenvolvedor.</p>
-        <ul class="showcase__bullets">
-          <li>Cores, fontes e identidade visual da sua marca</li>
-          <li>Menu de navegação configurável</li>
-          <li>Ativação de funcionalidades por toggle</li>
-          <li>Pré-visualização em tempo real antes de publicar</li>
-        </ul>
-      </div>
-    </div>
 
+      <div class="showcase__panel" data-panel="analytics">
+        <div class="showcase__content">
+          <p class="showcase__label">ANALYTICS</p>
+          <h3 class="showcase__headline">Entenda o que seu app gera, não só o que ele exibe</h3>
+          <p class="showcase__sub">Métricas de performance do canal mobile em um painel dedicado. Saiba de onde vêm seus downloads, quais produtos convertem mais e quanto o app representa no seu faturamento total.</p>
+          <ul class="showcase__bullets">
+            <li>Taxa de conversão do app vs. site</li>
+            <li>Produtos mais visualizados e comprados</li>
+            <li>Receita atribuída ao canal mobile</li>
+            <li>Em breve: relatórios automáticos por período</li>
+          </ul>
+          <span class="showcase__badge">Em breve</span>
+        </div>
+        <div class="showcase__media">
+          <img src="assets/AnalyticsEmBreve.png" alt="Analytics Korza" class="showcase__img" />
+        </div>
+      </div>
+
+      <div class="showcase__panel" data-panel="personalizar">
+        <div class="showcase__content">
+          <p class="showcase__label">PERSONALIZAÇÃO</p>
+          <h3 class="showcase__headline">Seu app do jeito que sua marca pede</h3>
+          <p class="showcase__sub">Ative funcionalidades, ajuste cores, configure o menu e defina a experiência do seu cliente sem precisar de código ou de um desenvolvedor.</p>
+          <ul class="showcase__bullets">
+            <li>Cores, fontes e identidade visual da sua marca</li>
+            <li>Menu de navegação configurável</li>
+            <li>Ativação de funcionalidades por toggle</li>
+            <li>Pré-visualização em tempo real antes de publicar</li>
+          </ul>
+        </div>
+        <div class="showcase__media">
+          <img src="assets/PersonalizarApp.png" alt="Personalizar app Korza" class="showcase__img" />
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- SEÇÕES FUTURAS -->
