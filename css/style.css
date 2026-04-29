@@ -615,6 +615,7 @@ ul {
   padding: 120px 64px;
   max-width: 1280px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .story__intro {
@@ -644,6 +645,7 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 80px;
+  justify-items: center;
 }
 
 .story__card {
@@ -683,7 +685,7 @@ ul {
 
 .story__pivot {
   border-top: 1px solid var(--color-border);
-  padding-top: 56px;
+  padding-top: 32px;
   text-align: center;
 }
 
@@ -725,7 +727,7 @@ ul {
    ============================================= */
 
 .showcase {
-  padding: 80px 64px;
+  padding: 40px 64px 80px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -737,6 +739,7 @@ ul {
   margin-bottom: 56px;
   overflow-x: auto; /* permite scroll horizontal das tabs em telas pequenas */
   scrollbar-width: none; /* oculta a scrollbar no Firefox mantendo o scroll funcional */
+  justify-content: center;
 }
 
 .showcase__tabs::-webkit-scrollbar {
@@ -786,6 +789,11 @@ ul {
   display: grid;
   opacity: 1;
   transform: translateY(0);
+  justify-items: center;
+}
+
+.showcase__content {
+  text-align: center;
 }
 
 .showcase__label {
@@ -819,6 +827,9 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 340px;
 }
 
 .showcase__bullets li {

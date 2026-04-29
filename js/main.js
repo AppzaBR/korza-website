@@ -136,26 +136,44 @@
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const target = tab.dataset.tab; /* valor do atributo data-tab do botão clicado */
+      const target = tab.dataset.tab;
+      const currentPanel = document.querySelector('.showcase__panel.active');
 
-      /* desativa todas as tabs e oculta todos os painéis */
+      /* ignora clique na tab já ativa */
+      if (currentPanel && currentPanel.dataset.panel === target) return;
+
+      /* atualiza estado ativo das tabs imediatamente */
       tabs.forEach(t => t.classList.remove('active'));
-      panels.forEach(p => {
-        p.classList.remove('active');
-        p.style.display = 'none';
-      });
-
-      /* ativa a tab clicada */
       tab.classList.add('active');
 
-      /* exibe o painel correspondente e anima sua entrada */
-      const activePanel = document.querySelector(`.showcase__panel[data-panel="${target}"]`);
-      activePanel.style.display = 'grid';
+      if (currentPanel) {
+        /* anima saída do painel atual */
+        currentPanel.style.opacity = '0';
+        currentPanel.style.transform = 'translateY(10px)';
 
-      /* aguarda um frame para o layout calcular o display:grid antes de animar */
-      requestAnimationFrame(() => {
-        activePanel.classList.add('active');
-      });
+        setTimeout(() => {
+          /* oculta o painel sainte e limpa inline styles */
+          currentPanel.classList.remove('active');
+          currentPanel.style.display = 'none';
+          currentPanel.style.opacity = '';
+          currentPanel.style.transform = '';
+
+          /* prepara o próximo painel no estado inicial da animação */
+          const next = document.querySelector(`.showcase__panel[data-panel="${target}"]`);
+          next.style.display = 'grid';
+          next.style.opacity = '0';
+          next.style.transform = 'translateY(10px)';
+
+          /* dois rAF garantem que o navegador processe display:grid antes de animar */
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              next.classList.add('active');
+              next.style.opacity = '';
+              next.style.transform = '';
+            });
+          });
+        }, 300); /* duração da saída em ms (deve coincidir com a transition CSS) */
+      }
     });
   });
 })();
