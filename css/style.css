@@ -1222,3 +1222,202 @@ ul {
   .hero__cta { justify-content: center; }
   .showcase__tabs { justify-content: flex-start; }
 }
+
+/* =============================================
+   CASES — cards com depoimentos expansíveis
+   ============================================= */
+
+.cases {
+  padding: 120px 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cases__intro {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.cases__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.cases__headline {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--color-text);
+}
+
+.cases__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cases__card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-card-bg);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.2s ease;
+}
+
+.cases__card:hover {
+  border-color: var(--color-blue);
+}
+
+.cases__card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cases__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cases__avatar:hover {
+  transform: scale(1.08);
+}
+
+.cases__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.cases__company {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.cases__quote {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.cases__full {
+  display: none;
+}
+
+.cases__full.visible {
+  display: inline;
+}
+
+.cases__expand-btn {
+  background: none;
+  border: none;
+  color: var(--color-blue);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.cases__expand-btn:hover {
+  opacity: 0.75;
+}
+
+/* =============================================
+   LIGHTBOX — zoom de imagens
+   ============================================= */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 9999; /* acima de tudo, inclusive da nav */
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  animation: lightbox-in 0.2s ease;
+}
+
+@keyframes lightbox-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox__close:hover {
+  opacity: 1;
+}
+
+/* =============================================
+   ACCENT TEXT — azul inline
+   ============================================= */
+
+.text-accent {
+  color: var(--color-blue);
+}
+
+/* =============================================
+   RESPONSIVO — cases (override)
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .cases__grid {
+    grid-template-columns: 1fr;
+  }
+  .cases {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cases {
+    padding: 64px 20px;
+  }
+  .cases__card {
+    padding: 28px 24px;
+  }
+}

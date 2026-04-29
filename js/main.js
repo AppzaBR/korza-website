@@ -205,3 +205,56 @@
 
   revealEls.forEach(el => revealObserver.observe(el));
 })();
+
+
+/* ── Cases: expand / collapse depoimento ───────────────────────────────────
+ * Alterna a visibilidade do texto completo (.cases__full) ao clicar em
+ * "Ver mais". Atualiza aria-expanded e o texto do botão para acessibilidade.
+ * ─────────────────────────────────────────────────────────────────────────*/
+document.querySelectorAll('.cases__expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const full     = btn.previousElementSibling.querySelector('.cases__full');
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    full.classList.toggle('visible', !expanded);
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.textContent = expanded ? 'Ver mais' : 'Ver menos';
+  });
+});
+
+
+/* ── Lightbox: zoom em imagens [data-zoom] ──────────────────────────────────
+ * Abre sobreposição fullscreen com a imagem clicada.
+ * Fecha ao clicar no overlay, no botão ✕ ou pressionar Escape.
+ * Bloqueia scroll do body enquanto aberto.
+ * ─────────────────────────────────────────────────────────────────────────*/
+const lightbox      = document.getElementById('lightbox');
+const lightboxImg   = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden'; /* evita scroll duplo com o lightbox aberto */
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-zoom]').forEach(img => {
+  img.addEventListener('click', () => openLightbox(img.src, img.alt));
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+/* clique fora da imagem (no overlay escuro) também fecha */
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+/* tecla Escape fecha o lightbox */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
