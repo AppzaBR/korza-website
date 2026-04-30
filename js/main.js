@@ -243,7 +243,7 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
-document.querySelectorAll('[data-zoom]').forEach(img => {
+document.querySelectorAll('[data-zoom], [data-lightbox]').forEach(img => {
   img.addEventListener('click', () => openLightbox(img.src, img.alt));
 });
 

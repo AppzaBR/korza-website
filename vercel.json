@@ -1,3 +1,11 @@
 {
-  "version": 2
+  "version": 2,
+  "headers": [
+    {
+      "source": "/assets/(.*\\.mp4)",
+      "headers": [
+        { "key": "Content-Type", "value": "video/mp4" }
+      ]
+    }
+  ]
 }
