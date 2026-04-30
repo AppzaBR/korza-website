@@ -46,7 +46,7 @@ const TRANSLATIONS = {
     story_card3_num:   '03',
     story_card3_title: 'Mobile representa mais de 70% das suas visitas',
     story_card3_text:  'Um app com sincronização automática e instantânea com fluidez tão boa quanto o site na internet ganha o coração do seu cliente.',
-    story_pivot:       'O app não é tecnologia.\nÉ o canal que faltava.',
+    story_pivot:       'O app não é tecnologia.\n<strong>É o canal que faltava.</strong>',
 
     /* Como Funciona — Steps */
     steps_label:  'PROCESSO SIMPLES',
@@ -68,15 +68,30 @@ const TRANSLATIONS = {
     cases_headline: 'Quem já usa\na Korza',
 
     /* Canal */
-    canal1_tag:      'SEU APP NAS STORES',
-    canal1_headline: 'Sua marca na Apple e no Google Play em até 14 dias',
-    canal1_desc:     'Um app com a identidade da sua marca, sincronizado em tempo real com sua loja. Sem código, sem desenvolvedor.',
-    canal2_tag:      'NOTIFICAÇÕES',
-    canal2_headline: 'Venda mais com notificações que chegam de verdade',
-    canal2_desc:     'Email tem 18% de abertura. Notificação tem 90%. Crie campanhas, teste antes de disparar e acompanhe os resultados em tempo real.',
-    canal3_tag:      'ANALYTICS E RESULTADOS',
-    canal3_headline: 'Veja os resultados do seu app em tempo real',
-    canal3_desc:     'O painel Korza vai muito além das notificações. Acompanhe downloads, faturamento gerado pelo app, vendas por campanha e taxa de conversão mobile.',
+    page_title:          'Korza — Seu app nas stores em até 14 dias',
+    canal1_tag:          'SEU APP NAS STORES',
+    canal1_headline:     'Sua marca na Apple e no Google Play em até 14 dias',
+    canal1_desc:         'Um app com a identidade da sua marca, sincronizado em tempo real com sua loja. Sem código, sem desenvolvedor.',
+    canal1_label_before: 'Antes',
+    canal1_label_after:  'Com a Korza',
+    canal1_li1:          'Sincronização automática com Shopify e Nuvemshop',
+    canal1_li2:          'Identidade visual 100% personalizada',
+    canal1_li3:          'Publicação na App Store e Google Play incluída',
+    canal1_li4:          'Funciona em iOS e Android',
+    canal2_tag:          'NOTIFICAÇÕES',
+    canal2_headline:     'Venda mais com notificações que chegam de verdade',
+    canal2_desc:         'Email tem 18% de abertura. Notificação tem 90%. Crie campanhas, teste antes de disparar e acompanhe os resultados em tempo real.',
+    canal2_li1:          'Taxa de abertura de até 90%',
+    canal2_li2:          'Teste de notificação antes de enviar',
+    canal2_li3:          'Agendamento por data, hora e fuso horário',
+    canal2_li4:          'UTM automático para rastreamento no GA4',
+    canal3_tag:          'ANALYTICS E RESULTADOS',
+    canal3_headline:     'Veja os resultados do seu app em tempo real',
+    canal3_desc:         'O painel Korza vai muito além das notificações. Acompanhe downloads, faturamento gerado pelo app, vendas por campanha e taxa de conversão mobile.',
+    canal3_li1:          'Faturamento gerado pelo canal mobile em tempo real',
+    canal3_li2:          'Vendas rastreadas por campanha com UTM',
+    canal3_li3:          'Taxa de conversão app versus site',
+    canal3_li4:          'Produtos mais visualizados e comprados',
   },
 
   en: {
@@ -120,7 +135,7 @@ const TRANSLATIONS = {
     story_card3_num:   '03',
     story_card3_title: 'Mobile accounts for over 70% of your visits',
     story_card3_text:  'An app with automatic, instant sync as smooth as your website wins your customer\'s heart.',
-    story_pivot:       'The app isn\'t technology.\nIt\'s the missing channel.',
+    story_pivot:       'The app isn\'t technology.\n<strong>It\'s the missing channel.</strong>',
 
     /* Como Funciona — Steps */
     steps_label:  'SIMPLE PROCESS',
@@ -142,15 +157,30 @@ const TRANSLATIONS = {
     cases_headline: 'Who already uses\nKorza',
 
     /* Canal */
-    canal1_tag:      'YOUR APP ON THE STORES',
-    canal1_headline: 'Your brand on the App Store and Google Play in up to 14 days',
-    canal1_desc:     'An app with your brand identity, synced in real time with your store. No code, no developer.',
-    canal2_tag:      'NOTIFICATIONS',
-    canal2_headline: 'Sell more with notifications that actually reach your customers',
-    canal2_desc:     'Email has 18% open rates. Notifications have 90%. Create campaigns, test before sending and track results in real time.',
-    canal3_tag:      'ANALYTICS AND RESULTS',
-    canal3_headline: 'See your app results in real time',
-    canal3_desc:     'The Korza dashboard goes far beyond notifications. Track downloads, app revenue, campaign sales and mobile conversion rate.',
+    page_title:          'Korza — Your app on the stores in up to 14 days',
+    canal1_tag:          'YOUR APP ON THE STORES',
+    canal1_headline:     'Your brand on the App Store and Google Play in up to 14 days',
+    canal1_desc:         'An app with your brand identity, synced in real time with your store. No code, no developer.',
+    canal1_label_before: 'Before',
+    canal1_label_after:  'With Korza',
+    canal1_li1:          'Automatic sync with Shopify and Nuvemshop',
+    canal1_li2:          '100% custom brand identity',
+    canal1_li3:          'App Store and Google Play publishing included',
+    canal1_li4:          'Works on iOS and Android',
+    canal2_tag:          'NOTIFICATIONS',
+    canal2_headline:     'Sell more with notifications that actually reach your customers',
+    canal2_desc:         'Email has 18% open rates. Notifications have 90%. Create campaigns, test before sending and track results in real time.',
+    canal2_li1:          'Open rates of up to 90%',
+    canal2_li2:          'Test notification before sending',
+    canal2_li3:          'Schedule by date, time and timezone',
+    canal2_li4:          'Automatic UTM tracking for GA4',
+    canal3_tag:          'ANALYTICS AND RESULTS',
+    canal3_headline:     'See your app results in real time',
+    canal3_desc:         'The Korza dashboard goes far beyond notifications. Track downloads, app revenue, campaign sales and mobile conversion rate.',
+    canal3_li1:          'Mobile channel revenue in real time',
+    canal3_li2:          'Sales tracked per campaign with UTM',
+    canal3_li3:          'App vs site conversion rate',
+    canal3_li4:          'Most viewed and purchased products',
   }
 };
 
@@ -249,15 +279,31 @@ function applyTranslations(lang) {
   setLines('[data-i18n="cases_headline"]',  t.cases_headline);
 
   /* ── Canal ── */
-  setText('[data-i18n="canal1_tag"]',      t.canal1_tag);
-  setText('[data-i18n="canal1_headline"]', t.canal1_headline);
-  setText('[data-i18n="canal1_desc"]',     t.canal1_desc);
-  setText('[data-i18n="canal2_tag"]',      t.canal2_tag);
-  setText('[data-i18n="canal2_headline"]', t.canal2_headline);
-  setText('[data-i18n="canal2_desc"]',     t.canal2_desc);
-  setText('[data-i18n="canal3_tag"]',      t.canal3_tag);
-  setText('[data-i18n="canal3_headline"]', t.canal3_headline);
-  setText('[data-i18n="canal3_desc"]',     t.canal3_desc);
+  setText('[data-i18n="canal1_tag"]',          t.canal1_tag);
+  setText('[data-i18n="canal1_headline"]',     t.canal1_headline);
+  setText('[data-i18n="canal1_desc"]',         t.canal1_desc);
+  setText('[data-i18n="canal1_label_before"]', t.canal1_label_before);
+  setText('[data-i18n="canal1_label_after"]',  t.canal1_label_after);
+  setText('[data-i18n="canal1_li1"]',          t.canal1_li1);
+  setText('[data-i18n="canal1_li2"]',          t.canal1_li2);
+  setText('[data-i18n="canal1_li3"]',          t.canal1_li3);
+  setText('[data-i18n="canal1_li4"]',          t.canal1_li4);
+  setText('[data-i18n="canal2_tag"]',          t.canal2_tag);
+  setText('[data-i18n="canal2_headline"]',     t.canal2_headline);
+  setText('[data-i18n="canal2_desc"]',         t.canal2_desc);
+  setText('[data-i18n="canal2_li1"]',          t.canal2_li1);
+  setText('[data-i18n="canal2_li2"]',          t.canal2_li2);
+  setText('[data-i18n="canal2_li3"]',          t.canal2_li3);
+  setText('[data-i18n="canal2_li4"]',          t.canal2_li4);
+  setText('[data-i18n="canal3_tag"]',          t.canal3_tag);
+  setText('[data-i18n="canal3_headline"]',     t.canal3_headline);
+  setText('[data-i18n="canal3_desc"]',         t.canal3_desc);
+  setText('[data-i18n="canal3_li1"]',          t.canal3_li1);
+  setText('[data-i18n="canal3_li2"]',          t.canal3_li2);
+  setText('[data-i18n="canal3_li3"]',          t.canal3_li3);
+  setText('[data-i18n="canal3_li4"]',          t.canal3_li4);
+  setLines('[data-i18n="story_pivot"]',        t.story_pivot);
+  document.title = t.page_title;
 
   /* ── Botão de idioma: atualiza estado ativo ── */
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {

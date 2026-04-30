@@ -862,12 +862,12 @@ ul {
 
 .canal__phone-css video {
   position: absolute;
-  top: 2%;
-  left: 3%;
-  width: 94%;
-  height: 96%;
+  top: 1.5%;
+  left: 2.5%;
+  width: 95%;
+  height: 97%;
   object-fit: cover;
-  border-radius: 40px;
+  border-radius: 44px;
   z-index: 1;
 }
 
