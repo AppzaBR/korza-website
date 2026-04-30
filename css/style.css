@@ -723,176 +723,178 @@ ul {
 }
 
 /* =============================================
-   SHOWCASE DE FUNCIONALIDADES
+   CANAL — Zigzag 3 blocos
    ============================================= */
 
-.showcase {
-  padding: 40px 64px 80px;
-  max-width: 1280px;
-  margin: 0 auto;
+.canal {
+  padding: 120px 0;
 }
 
-.showcase__tabs {
-  display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: 56px;
-  overflow-x: auto; /* permite scroll horizontal das tabs em telas pequenas */
-  scrollbar-width: none; /* oculta a scrollbar no Firefox mantendo o scroll funcional */
-  justify-content: center;
-}
-
-.showcase__tabs::-webkit-scrollbar {
-  display: none; /* oculta a scrollbar em Chrome/Safari */
-}
-
-.showcase__tab {
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  padding: 14px 24px;
-  font-family: var(--font);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-muted);
-  cursor: pointer;
-  white-space: nowrap;
-  margin-bottom: -1px; /* sobrepõe 1px sobre a borda inferior do container, fundindo o underline ativo */
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.showcase__tab:hover {
-  color: var(--color-text);
-}
-
-.showcase__tab.active {
-  color: var(--color-blue);
-  border-bottom-color: var(--color-blue);
-}
-
-.showcase__panels {
-  position: relative;
-}
-
-.showcase__panel {
-  display: none; /* oculto por padrão; JS seta display:grid antes de aplicar .active */
-  grid-template-columns: 1fr 1.5fr;
-  gap: 64px;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(12px); /* painel parte levemente abaixo para animar a entrada */
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.showcase__panel.active {
+.canal__block {
   display: grid;
-  opacity: 1;
-  transform: translateY(0);
-  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 140px;
+  padding: 0 64px;
 }
 
-.showcase__content {
-  text-align: center;
+.canal__block:last-child {
+  margin-bottom: 0;
 }
 
-.showcase__label {
+.canal__block--rev {
+  direction: rtl;
+}
+
+.canal__block--rev > * {
+  direction: ltr;
+}
+
+.canal__tag {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-blue);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: block;
 }
 
-.showcase__headline {
-  font-size: clamp(24px, 2.6vw, 36px);
-  font-weight: 300;
-  line-height: 1.2;
+.canal__headline {
+  font-size: clamp(22px, 2.4vw, 34px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.15;
   color: var(--color-text);
-  letter-spacing: -0.5px;
   margin-bottom: 16px;
 }
 
-.showcase__sub {
-  font-size: 15px;
-  line-height: 1.7;
+.canal__desc {
+  font-size: 16px;
   color: var(--color-muted);
+  line-height: 1.75;
   margin-bottom: 24px;
 }
 
-.showcase__bullets {
+.canal__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
-  margin: 0 auto;
-  max-width: 340px;
 }
 
-.showcase__bullets li {
+.canal__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   font-size: 14px;
-  color: var(--color-text);
-  padding-left: 20px;
-  position: relative;
+  color: var(--color-muted);
   line-height: 1.5;
 }
 
-.showcase__bullets li::before {
+.canal__list li::before {
   content: '';
-  position: absolute;
-  left: 0;
-  top: 7px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--color-blue);
+  flex-shrink: 0;
+  margin-top: 6px;
 }
 
-.showcase__badge {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-blue);
-  border: 1px solid var(--color-blue);
-  border-radius: 4px;
-  padding: 4px 10px;
-}
-
-.showcase__media {
-  border: 1px solid var(--color-border);
-  border-radius: 0;
+.canal__frame {
+  border-radius: var(--radius-card);
   overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08);
 }
 
-.showcase__img {
+.canal__img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
+.canal__media--phones {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.canal__phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.canal__phone-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.canal__phone-label--before {
+  color: var(--color-muted);
+}
+
+.canal__phone-label--after {
+  color: var(--color-blue);
+}
+
+.canal__phone {
+  position: relative;
+  width: 100%;
+}
+
+.canal__phone-frame {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.canal__phone-video {
+  position: absolute;
+  top: 3.5%;
+  left: 5.5%;
+  width: 89%;
+  height: 93%;
+  object-fit: cover;
+  border-radius: 28px;
+  z-index: 1;
+}
+
 @media (max-width: 1024px) {
-  .showcase {
-    padding: 60px 40px;
-  }
-  .showcase__panel.active {
+  .canal__block,
+  .canal__block--rev {
     grid-template-columns: 1fr;
-    gap: 32px;
+    direction: ltr;
+    gap: 48px;
+    padding: 0 40px;
+    margin-bottom: 100px;
   }
 }
 
 @media (max-width: 767px) {
-  .showcase {
-    padding: 48px 24px;
+  .canal {
+    padding: 80px 0;
   }
-  .showcase__tab {
-    padding: 12px 16px;
-    font-size: 12px;
+  .canal__block,
+  .canal__block--rev {
+    padding: 0 24px;
+    margin-bottom: 80px;
+    gap: 36px;
+  }
+  .canal__media--phones {
+    gap: 12px;
+  }
+  .canal__phone-video {
+    border-radius: 20px;
   }
 }
 
