@@ -727,7 +727,7 @@ ul {
    ============================================= */
 
 .canal {
-  padding: 120px 0;
+  padding: 40px 0 120px;
 }
 
 .canal__block {
@@ -736,7 +736,7 @@ ul {
   gap: 80px;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto 140px;
+  margin: 0 auto 100px;
   padding: 0 64px;
 }
 
