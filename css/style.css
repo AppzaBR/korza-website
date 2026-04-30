@@ -862,17 +862,17 @@ ul {
   width: 200px;
   height: 405px;
   flex-shrink: 0;
+  border-radius: 44px;
+  overflow: hidden;
   background: #000;
 }
 
 .canal__phone-css video {
   position: absolute;
-  top: 4%;
-  left: 3%;
-  width: 94%;
-  height: 92%;
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   object-fit: cover;
-  border-radius: 36px;
   z-index: 1;
 }
 
