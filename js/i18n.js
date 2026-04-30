@@ -66,6 +66,17 @@ const TRANSLATIONS = {
     /* Cases */
     cases_label:    'CASES REAIS',
     cases_headline: 'Quem já usa\na Korza',
+
+    /* Canal */
+    canal1_tag:      'SEU APP NAS STORES',
+    canal1_headline: 'Sua marca na Apple e no Google Play em até 14 dias',
+    canal1_desc:     'Um app com a identidade da sua marca, sincronizado em tempo real com sua loja. Sem código, sem desenvolvedor.',
+    canal2_tag:      'NOTIFICAÇÕES',
+    canal2_headline: 'Venda mais com notificações que chegam de verdade',
+    canal2_desc:     'Email tem 18% de abertura. Notificação tem 90%. Crie campanhas, teste antes de disparar e acompanhe os resultados em tempo real.',
+    canal3_tag:      'ANALYTICS E RESULTADOS',
+    canal3_headline: 'Veja os resultados do seu app em tempo real',
+    canal3_desc:     'O painel Korza vai muito além das notificações. Acompanhe downloads, faturamento gerado pelo app, vendas por campanha e taxa de conversão mobile.',
   },
 
   en: {
@@ -129,6 +140,17 @@ const TRANSLATIONS = {
     /* Cases */
     cases_label:    'REAL CASES',
     cases_headline: 'Who already uses\nKorza',
+
+    /* Canal */
+    canal1_tag:      'YOUR APP ON THE STORES',
+    canal1_headline: 'Your brand on the App Store and Google Play in up to 14 days',
+    canal1_desc:     'An app with your brand identity, synced in real time with your store. No code, no developer.',
+    canal2_tag:      'NOTIFICATIONS',
+    canal2_headline: 'Sell more with notifications that actually reach your customers',
+    canal2_desc:     'Email has 18% open rates. Notifications have 90%. Create campaigns, test before sending and track results in real time.',
+    canal3_tag:      'ANALYTICS AND RESULTS',
+    canal3_headline: 'See your app results in real time',
+    canal3_desc:     'The Korza dashboard goes far beyond notifications. Track downloads, app revenue, campaign sales and mobile conversion rate.',
   }
 };
 
@@ -225,6 +247,17 @@ function applyTranslations(lang) {
   /* ── Cases ── */
   setText('[data-i18n="cases_label"]',      t.cases_label);
   setLines('[data-i18n="cases_headline"]',  t.cases_headline);
+
+  /* ── Canal ── */
+  setText('[data-i18n="canal1_tag"]',      t.canal1_tag);
+  setText('[data-i18n="canal1_headline"]', t.canal1_headline);
+  setText('[data-i18n="canal1_desc"]',     t.canal1_desc);
+  setText('[data-i18n="canal2_tag"]',      t.canal2_tag);
+  setText('[data-i18n="canal2_headline"]', t.canal2_headline);
+  setText('[data-i18n="canal2_desc"]',     t.canal2_desc);
+  setText('[data-i18n="canal3_tag"]',      t.canal3_tag);
+  setText('[data-i18n="canal3_headline"]', t.canal3_headline);
+  setText('[data-i18n="canal3_desc"]',     t.canal3_desc);
 
   /* ── Botão de idioma: atualiza estado ativo ── */
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
