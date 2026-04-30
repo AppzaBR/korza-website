@@ -730,6 +730,10 @@ ul {
   padding: 64px 0 120px;
 }
 
+#funcionalidades {
+  scroll-margin-top: calc(var(--nav-height) + 24px);
+}
+
 .canal__block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -860,16 +864,15 @@ ul {
   flex-shrink: 0;
   border-radius: 44px;
   overflow: hidden;
+  background: #000;
 }
 
 .canal__phone-css video {
   position: absolute;
-  top: 1.5%;
-  left: 2%;
-  width: 96%;
-  height: 97%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 42px;
   z-index: 1;
 }
 
