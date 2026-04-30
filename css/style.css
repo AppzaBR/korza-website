@@ -855,19 +855,19 @@ ul {
 
 .canal__phone-css {
   position: relative;
-  width: 240px;
-  height: 485px;
+  width: 200px;
+  height: 405px;
   flex-shrink: 0;
 }
 
 .canal__phone-css video {
   position: absolute;
-  top: 1.5%;
-  left: 2.5%;
-  width: 95%;
-  height: 97%;
+  top: 1.8%;
+  left: 3%;
+  width: 94%;
+  height: 96.5%;
   object-fit: cover;
-  border-radius: 44px;
+  border-radius: 40px;
   z-index: 1;
 }
 
