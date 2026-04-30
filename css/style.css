@@ -853,28 +853,42 @@ ul {
   color: var(--color-blue);
 }
 
-.canal__phone {
+.canal__phone-css {
+  width: 180px;
+  height: 360px;
+  background: #1a1a1a;
+  border-radius: 36px;
+  border: 2px solid #3a3a3a;
+  box-shadow: inset 0 0 0 1px #555, 0 0 0 1px #222;
   position: relative;
-  width: 100%;
+  overflow: hidden;
 }
 
-.canal__phone-frame {
-  width: 100%;
-  display: block;
-  position: relative;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.canal__phone-video {
+.canal__phone-notch {
   position: absolute;
-  top: 3.5%;
-  left: 5.5%;
-  width: 89%;
-  height: 93%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #111;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.canal__phone-screen {
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: #111;
+}
+
+.canal__phone-screen video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 28px;
-  z-index: 1;
+  display: block;
 }
 
 @media (max-width: 1024px) {
@@ -900,9 +914,6 @@ ul {
   }
   .canal__media--phones {
     gap: 12px;
-  }
-  .canal__phone-video {
-    border-radius: 20px;
   }
 }
 
