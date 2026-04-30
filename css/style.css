@@ -862,17 +862,16 @@ ul {
   width: 200px;
   height: 405px;
   flex-shrink: 0;
-  border-radius: 44px;
-  overflow: hidden;
-  background: #000;
 }
 
 .canal__phone-css video {
   position: absolute;
-  inset: -1px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
+  top: 7%;
+  left: 3.5%;
+  width: 93%;
+  height: 90%;
   object-fit: cover;
+  border-radius: 8px;
   z-index: 1;
 }
 
@@ -883,6 +882,7 @@ ul {
   height: 100%;
   z-index: 2;
   pointer-events: none;
+  display: block;
 }
 
 @media (max-width: 1024px) {
