@@ -727,7 +727,7 @@ ul {
    ============================================= */
 
 .canal {
-  padding: 40px 0 120px;
+  padding: 64px 0 120px;
 }
 
 .canal__block {
@@ -858,16 +858,18 @@ ul {
   width: 200px;
   height: 405px;
   flex-shrink: 0;
+  border-radius: 44px;
+  overflow: hidden;
 }
 
 .canal__phone-css video {
   position: absolute;
-  top: 1.8%;
-  left: 3%;
-  width: 94%;
-  height: 96.5%;
+  top: 1.5%;
+  left: 2%;
+  width: 96%;
+  height: 97%;
   object-fit: cover;
-  border-radius: 40px;
+  border-radius: 42px;
   z-index: 1;
 }
 
