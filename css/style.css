@@ -866,10 +866,10 @@ ul {
 
 .canal__phone-css video {
   position: absolute;
-  top: 7%;
+  top: 5%;
   left: 3.5%;
   width: 93%;
-  height: 90%;
+  height: 93%;
   object-fit: cover;
   border-radius: 8px;
   z-index: 1;
