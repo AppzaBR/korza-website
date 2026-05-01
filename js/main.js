@@ -247,6 +247,13 @@ document.querySelectorAll('[data-zoom], [data-lightbox]').forEach(img => {
   img.addEventListener('click', () => openLightbox(img.src, img.alt));
 });
 
+document.querySelectorAll('.canal__zoom-hint').forEach(hint => {
+  hint.addEventListener('click', () => {
+    const img = hint.previousElementSibling.querySelector('[data-lightbox]');
+    if (img) openLightbox(img.src, img.alt);
+  });
+});
+
 lightboxClose.addEventListener('click', closeLightbox);
 
 /* clique fora da imagem (no overlay escuro) também fecha */

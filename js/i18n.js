@@ -92,6 +92,7 @@ const TRANSLATIONS = {
     canal3_li2:          'Vendas rastreadas por campanha com UTM',
     canal3_li3:          'Taxa de conversão app versus site',
     canal3_li4:          'Produtos mais visualizados e comprados',
+    canal_zoom_hint:     'Toque para ampliar',
   },
 
   en: {
@@ -181,6 +182,7 @@ const TRANSLATIONS = {
     canal3_li2:          'Sales tracked per campaign with UTM',
     canal3_li3:          'App vs site conversion rate',
     canal3_li4:          'Most viewed and purchased products',
+    canal_zoom_hint:     'Tap to expand',
   }
 };
 
@@ -304,6 +306,9 @@ function applyTranslations(lang) {
   setText('[data-i18n="canal3_li4"]',          t.canal3_li4);
   setLines('[data-i18n="story_pivot"]',        t.story_pivot);
   document.title = t.page_title;
+  document.querySelectorAll('[data-i18n="canal_zoom_hint"]').forEach(el => {
+    el.textContent = t.canal_zoom_hint;
+  });
 
   /* ── Botão de idioma: atualiza estado ativo ── */
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
