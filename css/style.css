@@ -13,8 +13,8 @@
   --color-border: #E5E7EB;
   --color-card-bg: #F9FAFB;
 
-  --radius-btn: 8px;
-  --radius-card: 12px;
+  --radius-btn: 0;
+  --radius-card: 0;
 
   --nav-height: 112px;
   --nav-px: 64px;
@@ -895,7 +895,7 @@ ul {
   width: 220px;
   height: 445px;
   background: #1a1a1a;
-  border-radius: 44px;
+  border-radius: 0;
   border: 6px solid #2a2a2a;
   overflow: hidden;
   flex-shrink: 0;
@@ -951,7 +951,7 @@ ul {
   .canal__phone-css {
     width: 140px;
     height: 284px;
-    border-radius: 32px;
+    border-radius: 0;
     border: 5px solid #2a2a2a;
   }
 
@@ -1428,7 +1428,7 @@ ul {
 .lightbox__img {
   max-width: 90vw;
   max-height: 90vh;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
   animation: lightbox-in 0.2s ease;
 }
