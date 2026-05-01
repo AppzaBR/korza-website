@@ -299,19 +299,20 @@ ul {
   color: var(--color-blue);
 }
 
-/* Coluna direita: canvas */
-.hero__col--canvas {
+/* Coluna direita: mockup */
+.hero__col--mockup {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 600px;
 }
 
-#particles {
-  display: block;
+.hero__mockup-img {
   width: 100%;
-  height: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* =============================================
@@ -404,15 +405,11 @@ ul {
     font-size: 16px;
   }
 
-  .hero__col--canvas {
-    width: 100%;
-    height: 320px;
+  .hero__col--mockup {
     margin-top: 32px;
-  }
-
-  #particles {
-    width: 100%;
-    height: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -485,9 +482,14 @@ ul {
     font-size: 14px;
   }
 
-  .hero__col--canvas {
-    height: 220px;
+  .hero__col--mockup {
     margin-top: 20px;
+  }
+
+  .hero__mockup-img {
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -520,9 +522,6 @@ ul {
     font-size: 14px;
   }
 
-  .hero__col--canvas {
-    height: 180px;
-  }
 }
 
 /* =============================================
@@ -704,6 +703,20 @@ ul {
 .story__pivot-text strong {
   font-weight: 700;
   color: var(--color-blue);
+}
+
+.story__particles-wrap {
+  width: 100%;
+  height: 200px;
+  margin-top: 48px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.story__particles-wrap #particles {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Responsivo story */
@@ -1404,6 +1417,49 @@ ul {
 
 .cases__expand-btn:hover {
   opacity: 0.75;
+}
+
+.cases__segment {
+  font-size: 11px;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+}
+
+.cases__result {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-blue);
+  background: rgba(21, 93, 252, 0.07);
+  padding: 8px 14px;
+  border-left: 3px solid var(--color-blue);
+  line-height: 1.5;
+}
+
+.cases__store-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.cases__store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border: 1px solid var(--color-border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: border-color 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.cases__store-btn:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
 }
 
 /* =============================================
