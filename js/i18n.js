@@ -46,7 +46,7 @@ const TRANSLATIONS = {
     story_card3_num:   '03',
     story_card3_title: 'Não seja esquecido pelo seu cliente',
     story_card3_text:  'Um app com sincronização automática e instantânea com fluidez tão boa quanto o site na internet ganha o coração do seu cliente.',
-    story_pivot:       '"Um app é o canal que falta na sua loja."',
+    story_pivot:       'Um app é o canal que <span class="text-accent">Falta na sua Loja.</span>',
 
     /* Como Funciona — Steps */
     steps_label:  'PROCESSO SIMPLES',
@@ -93,8 +93,6 @@ const TRANSLATIONS = {
     canal3_li3:          'Taxa de conversão app versus site',
     canal3_li4:          'Produtos mais visualizados e comprados',
     canal_zoom_hint:     'Toque para ampliar',
-    canal2_media_tag:    'Teste suas notificações\nna hora',
-    canal3_media_tag:    '"Isso custa isso\nporque resolve isso."',
   },
 
   en: {
@@ -138,7 +136,7 @@ const TRANSLATIONS = {
     story_card3_num:   '03',
     story_card3_title: 'Don\'t be forgotten by your customer',
     story_card3_text:  'An app with automatic, instant sync as smooth as your website wins your customer\'s heart.',
-    story_pivot:       '"An app is the missing channel in your store."',
+    story_pivot:       'An app is the <span class="text-accent">Missing Channel</span> in your store.',
 
     /* Como Funciona — Steps */
     steps_label:  'SIMPLE PROCESS',
@@ -185,8 +183,6 @@ const TRANSLATIONS = {
     canal3_li3:          'App vs site conversion rate',
     canal3_li4:          'Most viewed and purchased products',
     canal_zoom_hint:     'Tap to expand',
-    canal2_media_tag:    'Test your notifications\nright now',
-    canal3_media_tag:    '"This costs what it does\nbecause it delivers."',
   }
 };
 
@@ -309,8 +305,6 @@ function applyTranslations(lang) {
   setText('[data-i18n="canal3_li3"]',          t.canal3_li3);
   setText('[data-i18n="canal3_li4"]',          t.canal3_li4);
   setLines('[data-i18n="story_pivot"]',        t.story_pivot);
-  setLines('[data-i18n="canal2_media_tag"]',   t.canal2_media_tag);
-  setLines('[data-i18n="canal3_media_tag"]',   t.canal3_media_tag);
   document.title = t.page_title;
   document.querySelectorAll('[data-i18n="canal_zoom_hint"]').forEach(el => {
     el.textContent = t.canal_zoom_hint;

@@ -330,7 +330,7 @@ ul {
   left: 0;
   font-size: 15px;
   font-weight: 700;
-  color: var(--color-blue);
+  color: var(--color-text);
   line-height: 1.4;
   letter-spacing: -0.3px;
   pointer-events: none;
@@ -1507,7 +1507,7 @@ ul {
 .canal__float-tag {
   font-size: 16px;
   font-weight: 700;
-  color: var(--color-blue);
+  color: var(--color-text);
   line-height: 1.45;
   letter-spacing: -0.2px;
 }
