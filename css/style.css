@@ -309,10 +309,24 @@ ul {
 
 .hero__mockup-img {
   width: 100%;
-  max-width: 560px;
+  max-width: 580px;
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+.hero__platform-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hero__eyebrow-sep {
+  color: var(--color-blue);
+  opacity: 0.5;
+  margin: 0 2px;
 }
 
 /* =============================================
@@ -487,7 +501,7 @@ ul {
   }
 
   .hero__mockup-img {
-    max-width: 320px;
+    max-width: 300px;
     margin: 0 auto;
     display: block;
   }
@@ -705,19 +719,6 @@ ul {
   color: var(--color-blue);
 }
 
-.story__particles-wrap {
-  width: 100%;
-  height: 200px;
-  margin-top: 48px;
-  opacity: 0.45;
-  pointer-events: none;
-}
-
-.story__particles-wrap #particles {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
 /* Responsivo story */
 @media (max-width: 1024px) {

@@ -16,7 +16,7 @@ const TRANSLATIONS = {
     nav_cta:      'CRIAR MEU APP',
 
     /* Hero */
-    hero_eyebrow:     'Shopify · Nuvemshop · Sites Próprios',
+    hero_eyebrow_sites: 'Sites Próprios',
     hero_headline_1:  'O canal que transforma',
     hero_headline_2:  'tráfego em',
     hero_accent:      ' Recorrência.',
@@ -38,29 +38,29 @@ const TRANSLATIONS = {
     story_label:       'POR QUE VOCÊ PRECISA DE UM APP',
     story_headline:    'O dinheiro que você já tem,\nmas ainda não <span class="text-accent">Recupera.</span>',
     story_card1_num:   '01',
-    story_card1_title: 'Você depende de tráfego pago para vender',
+    story_card1_title: 'Gaste menos com tráfego',
     story_card1_text:  'Cada venda custa caro. Sem canal próprio, você financia o crescimento do Google e do Meta, não o seu.',
     story_card2_num:   '02',
-    story_card2_title: 'Seu cliente comprou uma vez e sumiu',
+    story_card2_title: 'Fidelize e ative recompras',
     story_card2_text:  'Email tem 18% de abertura. Notificação tem 90%. Quem não tem app não tem como reconquistar o cliente sem pagar de novo por ele.',
     story_card3_num:   '03',
-    story_card3_title: 'Mobile representa mais de 70% das suas visitas',
+    story_card3_title: 'Não seja esquecido pelo seu cliente',
     story_card3_text:  'Um app com sincronização automática e instantânea com fluidez tão boa quanto o site na internet ganha o coração do seu cliente.',
-    story_pivot:       'O app não é tecnologia.\n<strong>É o canal que faltava.</strong>',
+    story_pivot:       '"Um app é o canal que falta na sua loja."',
 
     /* Como Funciona — Steps */
     steps_label:  'PROCESSO SIMPLES',
     steps_headline: 'Três passos para\n<span class="text-accent">seu app no ar</span>',
     steps_num1:   '01',
-    steps_title1: 'Responda o quiz ou fale com um especialista',
+    steps_title1: 'Conecte com Shopify ou Nuvemshop',
     steps_text1:  'Em menos de 3 minutos você descobre qual plano faz sentido para o seu negócio. Prefere conversar? Nosso time está no WhatsApp.',
     steps_num2:   '02',
-    steps_title2: 'Seu app é produzido',
+    steps_title2: 'Construímos seu app',
     steps_text2:  'Após o alinhamento do projeto e contrato assinado, nossa equipe configura e personaliza o app com a identidade da sua marca. Sem código, sem complicação.',
     steps_num3:   '03',
-    steps_title3: 'Publicação e acompanhamento',
+    steps_title3: 'Publicamos seu app em até 14 dias',
     steps_text3:  'Seu app vai para a App Store e Google Play em 7 a 14 dias. No primeiro mês, nossa equipe acompanha de perto os resultados e ajuda a explorar cada funcionalidade.',
-    steps_cta1:   'Responder o quiz',
+    steps_cta1:   'Demo Gratuita',
     steps_cta2:   'Falar com especialista',
 
     /* Cases */
@@ -106,7 +106,7 @@ const TRANSLATIONS = {
     nav_cta:      'CREATE MY APP',
 
     /* Hero */
-    hero_eyebrow:     'Shopify · Nuvemshop · Own Sites',
+    hero_eyebrow_sites: 'Own Sites',
     hero_headline_1:  'The channel that turns',
     hero_headline_2:  'traffic into',
     hero_accent:      ' Recurring Revenue.',
@@ -128,29 +128,29 @@ const TRANSLATIONS = {
     story_label:       'WHY YOU NEED AN APP',
     story_headline:    'The money you already have,\nbut haven\'t <span class="text-accent">Recovered</span> yet.',
     story_card1_num:   '01',
-    story_card1_title: 'You depend on paid traffic to sell',
+    story_card1_title: 'Spend less on paid traffic',
     story_card1_text:  'Every sale is costly. Without your own channel, you\'re funding Google and Meta\'s growth, not yours.',
     story_card2_num:   '02',
-    story_card2_title: 'Your customer bought once and disappeared',
+    story_card2_title: 'Build loyalty and activate repurchases',
     story_card2_text:  'Email has 18% open rates. Notifications have 90%. Without an app you can\'t win back customers without paying for them again.',
     story_card3_num:   '03',
-    story_card3_title: 'Mobile accounts for over 70% of your visits',
+    story_card3_title: 'Don\'t be forgotten by your customer',
     story_card3_text:  'An app with automatic, instant sync as smooth as your website wins your customer\'s heart.',
-    story_pivot:       'The app isn\'t technology.\n<strong>It\'s the missing channel.</strong>',
+    story_pivot:       '"An app is the missing channel in your store."',
 
     /* Como Funciona — Steps */
     steps_label:  'SIMPLE PROCESS',
     steps_headline: 'Three steps to\n<span class="text-accent">launch your app</span>',
     steps_num1:   '01',
-    steps_title1: 'Take the quiz or talk to a specialist',
+    steps_title1: 'Connect with Shopify or Nuvemshop',
     steps_text1:  'In less than 3 minutes you\'ll find out which plan makes sense for your business. Prefer to chat? Our team is on WhatsApp.',
     steps_num2:   '02',
-    steps_title2: 'Your app is built',
+    steps_title2: 'We build your app',
     steps_text2:  'After project alignment and contract signing, our team configures and customizes the app with your brand identity. No code, no hassle.',
     steps_num3:   '03',
-    steps_title3: 'Publishing and onboarding',
+    steps_title3: 'We publish your app in up to 14 days',
     steps_text3:  'Your app goes live on the App Store and Google Play in 7 to 14 days. In the first month, our team closely monitors results and helps you explore every feature.',
-    steps_cta1:   'Take the quiz',
+    steps_cta1:   'Free Demo',
     steps_cta2:   'Talk to a specialist',
 
     /* Cases */
@@ -227,7 +227,7 @@ function applyTranslations(lang) {
   setText('[data-i18n="nav_cta"]',      t.nav_cta);
 
   /* ── Hero ── */
-  setText('[data-i18n="hero_eyebrow"]',    t.hero_eyebrow);
+  setText('[data-i18n="hero_eyebrow_sites"]', t.hero_eyebrow_sites);
   setText('[data-i18n="hero_headline_1"]', t.hero_headline_1);
   setText('[data-i18n="hero_headline_2"]', t.hero_headline_2);
   setText('[data-i18n="hero_accent"]',     t.hero_accent);
@@ -274,7 +274,6 @@ function applyTranslations(lang) {
   setText('[data-i18n="steps_title3"]',  t.steps_title3);
   setText('[data-i18n="steps_text3"]',   t.steps_text3);
   setText('[data-i18n="steps_cta1"]',    t.steps_cta1);
-  setText('[data-i18n="steps_cta2"]',    t.steps_cta2);
 
   /* ── Cases ── */
   setText('[data-i18n="cases_label"]',      t.cases_label);
