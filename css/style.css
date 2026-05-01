@@ -859,27 +859,20 @@ ul {
 
 .canal__phone-css {
   position: relative;
-  width: 200px;
-  height: 405px;
+  width: 220px;
+  height: 445px;
+  background: #1a1a1a;
+  border-radius: 44px;
+  border: 6px solid #2a2a2a;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
 .canal__phone-css video {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
-}
-
-.canal__phone-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
+  display: block;
 }
 
 @media (max-width: 1024px) {
