@@ -93,6 +93,8 @@ const TRANSLATIONS = {
     canal3_li3:          'Taxa de conversão app versus site',
     canal3_li4:          'Produtos mais visualizados e comprados',
     canal_zoom_hint:     'Toque para ampliar',
+    canal2_media_tag:    '90% de abertura.\nSem pagar por isso.',
+    canal3_media_tag:    '"Isso custa isso\nporque resolve isso."',
   },
 
   en: {
@@ -183,6 +185,8 @@ const TRANSLATIONS = {
     canal3_li3:          'App vs site conversion rate',
     canal3_li4:          'Most viewed and purchased products',
     canal_zoom_hint:     'Tap to expand',
+    canal2_media_tag:    '90% open rate.\nNo extra cost.',
+    canal3_media_tag:    '"This costs what it does\nbecause it delivers."',
   }
 };
 
@@ -274,6 +278,7 @@ function applyTranslations(lang) {
   setText('[data-i18n="steps_title3"]',  t.steps_title3);
   setText('[data-i18n="steps_text3"]',   t.steps_text3);
   setText('[data-i18n="steps_cta1"]',    t.steps_cta1);
+  setText('[data-i18n="steps_cta2"]',    t.steps_cta2);
 
   /* ── Cases ── */
   setText('[data-i18n="cases_label"]',      t.cases_label);
@@ -304,6 +309,8 @@ function applyTranslations(lang) {
   setText('[data-i18n="canal3_li3"]',          t.canal3_li3);
   setText('[data-i18n="canal3_li4"]',          t.canal3_li4);
   setLines('[data-i18n="story_pivot"]',        t.story_pivot);
+  setLines('[data-i18n="canal2_media_tag"]',   t.canal2_media_tag);
+  setLines('[data-i18n="canal3_media_tag"]',   t.canal3_media_tag);
   document.title = t.page_title;
   document.querySelectorAll('[data-i18n="canal_zoom_hint"]').forEach(el => {
     el.textContent = t.canal_zoom_hint;
