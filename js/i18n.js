@@ -36,7 +36,7 @@ const TRANSLATIONS = {
 
     /* Story / Pain */
     story_label:       'POR QUE VOCÊ PRECISA DE UM APP',
-    story_headline:    'O dinheiro que você já tem,\nmas ainda não recupera.',
+    story_headline:    'O dinheiro que você já tem,\nmas ainda não <span class="text-accent">Recupera.</span>',
     story_card1_num:   '01',
     story_card1_title: 'Você depende de tráfego pago para vender',
     story_card1_text:  'Cada venda custa caro. Sem canal próprio, você financia o crescimento do Google e do Meta, não o seu.',
@@ -50,7 +50,7 @@ const TRANSLATIONS = {
 
     /* Como Funciona — Steps */
     steps_label:  'PROCESSO SIMPLES',
-    steps_headline: 'Três passos para\nseu app no ar',
+    steps_headline: 'Três passos para\n<span class="text-accent">seu app no ar</span>',
     steps_num1:   '01',
     steps_title1: 'Responda o quiz ou fale com um especialista',
     steps_text1:  'Em menos de 3 minutos você descobre qual plano faz sentido para o seu negócio. Prefere conversar? Nosso time está no WhatsApp.',
@@ -108,8 +108,8 @@ const TRANSLATIONS = {
     hero_eyebrow:     'Shopify · Nuvemshop · Own Sites',
     hero_headline_1:  'The channel that turns',
     hero_headline_2:  'traffic into',
-    hero_accent:      ' recurring revenue.',
-    hero_sub:         'Your store on your customer\'s phone, with push notifications, campaigns, analytics and app store publishing in up to 14 days.',
+    hero_accent:      ' Recurring Revenue.',
+    hero_sub:         'Your store on your customer\'s phone, with notifications, campaigns, analytics and app store publishing in up to 14 days.',
     hero_stat1_label: 'Revenue generated for clients',
     hero_stat2_label: 'Apps launched in 2026',
     hero_stat3_num:   '7–14 days',
@@ -119,19 +119,19 @@ const TRANSLATIONS = {
 
     /* Marquee */
     marquee_items: [
-      'Shopify', 'Nuvemshop', 'Unlimited Push Notifications', 'Analytics', 'iOS', 'Android',
+      'Shopify', 'Nuvemshop', 'Unlimited Notifications', 'Analytics', 'iOS', 'Android',
       'Published in 14 days', 'Sales Campaigns', 'App Customization', 'Instant Sync'
     ],
 
     /* Story / Pain */
     story_label:       'WHY YOU NEED AN APP',
-    story_headline:    'The money you already have,\nbut haven\'t recovered yet.',
+    story_headline:    'The money you already have,\nbut haven\'t <span class="text-accent">Recovered</span> yet.',
     story_card1_num:   '01',
     story_card1_title: 'You depend on paid traffic to sell',
     story_card1_text:  'Every sale is costly. Without your own channel, you\'re funding Google and Meta\'s growth, not yours.',
     story_card2_num:   '02',
     story_card2_title: 'Your customer bought once and disappeared',
-    story_card2_text:  'Email has 18% open rates. Push notifications have 90%. Without an app you can\'t win back customers without paying for them again.',
+    story_card2_text:  'Email has 18% open rates. Notifications have 90%. Without an app you can\'t win back customers without paying for them again.',
     story_card3_num:   '03',
     story_card3_title: 'Mobile accounts for over 70% of your visits',
     story_card3_text:  'An app with automatic, instant sync as smooth as your website wins your customer\'s heart.',
@@ -139,7 +139,7 @@ const TRANSLATIONS = {
 
     /* Como Funciona — Steps */
     steps_label:  'SIMPLE PROCESS',
-    steps_headline: 'Three steps to\nlaunch your app',
+    steps_headline: 'Three steps to\n<span class="text-accent">launch your app</span>',
     steps_num1:   '01',
     steps_title1: 'Take the quiz or talk to a specialist',
     steps_text1:  'In less than 3 minutes you\'ll find out which plan makes sense for your business. Prefer to chat? Our team is on WhatsApp.',
