@@ -866,12 +866,11 @@ ul {
 
 .canal__phone-css video {
   position: absolute;
-  top: 6%;
-  left: 3.5%;
-  width: 93%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 8px;
+  top: 5%;
+  left: 3%;
+  width: 94%;
+  height: 88%;
+  object-fit: fill;
   z-index: 1;
 }
 
@@ -882,7 +881,6 @@ ul {
   height: 100%;
   z-index: 2;
   pointer-events: none;
-  display: block;
 }
 
 @media (max-width: 1024px) {
