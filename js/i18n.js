@@ -93,7 +93,7 @@ const TRANSLATIONS = {
     canal3_li3:          'Taxa de conversão app versus site',
     canal3_li4:          'Produtos mais visualizados e comprados',
     canal_zoom_hint:     'Toque para ampliar',
-    canal2_media_tag:    '90% de abertura.\nSem pagar por isso.',
+    canal2_media_tag:    'Teste suas notificações\nna hora',
     canal3_media_tag:    '"Isso custa isso\nporque resolve isso."',
   },
 
@@ -185,7 +185,7 @@ const TRANSLATIONS = {
     canal3_li3:          'App vs site conversion rate',
     canal3_li4:          'Most viewed and purchased products',
     canal_zoom_hint:     'Tap to expand',
-    canal2_media_tag:    '90% open rate.\nNo extra cost.',
+    canal2_media_tag:    'Test your notifications\nright now',
     canal3_media_tag:    '"This costs what it does\nbecause it delivers."',
   }
 };

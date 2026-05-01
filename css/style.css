@@ -1493,101 +1493,28 @@ ul {
 }
 
 /* =============================================
-   CANAL — Bloco 2: Notificações
+   CANAL — Blocos 2 e 3: frase solta + lightbox
    ============================================= */
 
-.canal__media--notif {
+.canal__media--float {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.canal__notif-wrap {
-  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   width: 100%;
-  max-width: 500px;
-  min-height: 360px;
 }
 
-.canal__media-tag {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 15px;
+.canal__float-tag {
+  font-size: 16px;
   font-weight: 700;
   color: var(--color-blue);
-  line-height: 1.4;
-  letter-spacing: -0.3px;
-  z-index: 3;
-}
-
-.canal__notif-tablet {
-  width: 80%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  margin-top: 48px;
-}
-
-.canal__notif-phone {
-  position: absolute;
-  bottom: -20px;
-  right: 0;
-  width: 38%;
-  height: auto;
-  border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
-}
-
-/* =============================================
-   CANAL — Bloco 3: Analytics
-   ============================================= */
-
-.canal__media--analytics {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.canal__analytics-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-}
-
-.canal__analytics-wrap .canal__media-tag {
-  position: relative;
-  display: block;
-  margin-bottom: 16px;
-  top: auto;
-  left: auto;
-}
-
-.canal__analytics-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  line-height: 1.45;
+  letter-spacing: -0.2px;
 }
 
 @media (max-width: 767px) {
-  .canal__notif-wrap {
-    min-height: 260px;
-  }
-  .canal__notif-tablet {
-    width: 75%;
-  }
-  .canal__notif-phone {
-    width: 42%;
-    bottom: -10px;
-  }
-  .canal__media-tag {
-    font-size: 13px;
-  }
-  .canal__analytics-wrap {
-    max-width: 100%;
+  .canal__float-tag {
+    font-size: 14px;
   }
 }
 
