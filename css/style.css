@@ -1152,17 +1152,16 @@ ul {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.steps__cta--primary {
-  background: var(--color-blue);
-  color: #fff;
-  animation: cta-pulse 2.4s ease-in-out infinite;
-}
-
+.steps__cta--primary,
 .steps__cta--outline {
   background: var(--color-blue);
   color: #fff;
   border: none;
+  min-width: 240px;
   animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+.steps__cta--outline {
   animation-delay: 1.2s;
 }
 
